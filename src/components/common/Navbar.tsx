@@ -6,13 +6,12 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
-  Link as ChakraLink,
-  LinkProps,
+  Link,
 } from "@chakra-ui/react";
 import logo from "@/assets/logo.svg";
 import logoDark from "@/assets/logodark.svg";
 import Linkstack from "./linkstack";
-import { Link as ReactRouterLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import darkIcon from "@/assets/dark.svg";
 import lightIcon from "@/assets/light.svg";
 
@@ -41,7 +40,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
       <Container maxW='8xl' py={{ base: "18px", xl: "30px" }}>
         <HStack w='full' justify='space-between'>
           <HStack w={{ base: "initial", xl: "50%" }}>
-            <ChakraLink as={ReactRouterLink} to='/' _hover={{ textDecor: "none" }}>
+            <Link href='/' _hover={{ textDecor: "none" }}>
               <HStack>
                 <Image
                   src={colorMode === "light" ? logoDark : logo}
@@ -52,7 +51,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
                   Ahamefula Ayomide
                 </Text>
               </HStack>
-            </ChakraLink>
+            </Link>
           </HStack>
 
           <HStack
@@ -64,50 +63,46 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
             fontSize='16px'
             fontWeight='500'
           >
-            <ChakraLink
-              as={ReactRouterLink}
+            <Link
               id='navlink'
-              to='/about'
+              href='/about'
               onClick={handleChange}
               borderRadius={router.pathname.includes("about") ? "3px" : ""}
               borderBottom={router.pathname.includes("about") ? "1.5px solid #5221e6" : ""}
               // borderColor={router.pathname.includes("about") ? "" : ""}
             >
               About
-            </ChakraLink>
+            </Link>
 
-            <ChakraLink
-              as={ReactRouterLink}
+            <Link
               id='navlink'
-              to='/process'
+              href='/process'
               onClick={handleChange}
               borderRadius={router.pathname.includes("process") ? "3px" : ""}
               borderBottom={router.pathname.includes("process") ? "1.5px solid #5221e6" : ""}
             >
               Design Process
-            </ChakraLink>
+            </Link>
 
-            <ChakraLink
-              as={ReactRouterLink}
+            <Link
               id='navlink'
-              to='/works'
+              href='/works'
               onClick={handleChange}
               borderRadius={router.pathname.includes("works") ? "3px" : ""}
               borderBottom={router.pathname.includes("works") ? "1.5px solid #5221e6" : ""}
             >
               Works
-            </ChakraLink>
+            </Link>
 
-            <ChakraLink
-              as={ReactRouterLink}
+            <Link
               id='navlink'
-              to='/contact'
+              href='/contact'
               onClick={handleChange}
               borderRadius={router.pathname.includes("contact") ? "3px" : ""}
               borderBottom={router.pathname.includes("contact") ? "1.5px solid #5221e6" : ""}
             >
               Contact
-            </ChakraLink>
+            </Link>
 
             <Box _hover={{ transform: "scale(0.94)", transition: "0.5s ease-in-out" }}>
               <Image

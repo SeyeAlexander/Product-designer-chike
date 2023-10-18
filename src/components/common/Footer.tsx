@@ -7,11 +7,9 @@ import {
   HStack,
   VStack,
   useColorMode,
-  Link as ChakraLink,
-  LinkProps,
+  Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Link as ReactRouterLink } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 import logoDark from "@/assets/logodark.svg";
 import linkedin2 from "@/assets/linkedin2.svg";
@@ -63,9 +61,9 @@ const Footer = ({
               _hover={{ textDecoration: "none" }}
             >
               <Image src={colorMode === "light" ? logoDark : logo} />
-              <ChakraLink as={ReactRouterLink} to='/' id='footlink' onClick={handleHomeClick}>
+              <Link href='/' id='footlink' onClick={handleHomeClick}>
                 Ahamefula Ayomide
-              </ChakraLink>
+              </Link>
             </HStack>
 
             <Text fontSize='18px' w={{ base: "full", xl: "400px" }} color={textColor2}>
@@ -96,65 +94,60 @@ const Footer = ({
             </HStack>
 
             <HStack pt='70px' px='20px' w={{ base: "full", xl: "300px" }} justify='space-between'>
-              <ChakraLink
-                as={ReactRouterLink}
+              <Link
                 isExternal
-                to='https://www.linkedin.com/in/princejese/'
+                href='https://www.linkedin.com/in/princejese/'
                 _active={{
                   transform: "scale(0.98)",
                   transition: "0.3s ease all",
                 }}
               >
                 <Image src={linkedin2} w={{ base: "25", xl: "25px" }} />
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink
-                as={ReactRouterLink}
+              <Link
                 isExternal
-                to='https://twitter.com/Prince_Jese'
+                href='https://twitter.com/Prince_Jese'
                 _active={{
                   transform: "scale(0.98)",
                   transition: "0.3s ease all",
                 }}
               >
                 <Image src={twitter2} w={{ base: "25", xl: "25px" }} />
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink
-                as={ReactRouterLink}
+              <Link
                 isExternal
-                to='https://www.dribbble.com/Prince_Jese'
+                href='https://www.dribbble.com/Prince_Jese'
                 _active={{
                   transform: "scale(0.98)",
                   transition: "0.3s ease all",
                 }}
               >
                 <Image src={dribble2} w={{ base: "25", xl: "25px" }} />
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink
-                as={ReactRouterLink}
+              <Link
                 isExternal
-                to='https://www.behance.net/ayomideahamefu'
+                href='https://www.behance.net/ayomideahamefu'
                 _active={{
                   transform: "scale(0.98)",
                   transition: "0.3s ease all",
                 }}
               >
                 <Image src={behance2} w={{ base: "25", xl: "25px" }} />
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink
-                as={ReactRouterLink}
+              <Link
                 isExternal
-                to='https://www.instagram.com/prince_jese/'
+                href='https://www.instagram.com/prince_jese/'
                 _active={{
                   transform: "scale(0.98)",
                   transition: "0.3s ease all",
                 }}
               >
                 <Image src={insta2} w={{ base: "25", xl: "25px" }} />
-              </ChakraLink>
+              </Link>
             </HStack>
           </VStack>
 
@@ -172,25 +165,25 @@ const Footer = ({
               spacing='20px'
               fontWeight='500'
             >
-              <ChakraLink as={ReactRouterLink} id='footlink' to='/' onClick={handleHomeClick}>
+              <Link id='footlink' href='/' onClick={handleHomeClick}>
                 Home
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink as={ReactRouterLink} id='footlink' to='/about' onClick={handleChange}>
+              <Link id='footlink' href='/about' onClick={handleChange}>
                 About
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink as={ReactRouterLink} id='footlink' to='/process' onClick={handleChange}>
+              <Link id='footlink' href='/process' onClick={handleChange}>
                 Design Process
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink as={ReactRouterLink} id='footlink' to='/works' onClick={handleChange}>
+              <Link id='footlink' href='/works' onClick={handleChange}>
                 Works
-              </ChakraLink>
+              </Link>
 
-              <ChakraLink as={ReactRouterLink} id='footlink' to='/contact' onClick={handleChange}>
+              <Link id='footlink' href='/contact' onClick={handleChange}>
                 Contact
-              </ChakraLink>
+              </Link>
             </VStack>
 
             <VStack
