@@ -6,12 +6,13 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
-  // Link,
+  Link as ChakraLink,
+  LinkProps,
 } from "@chakra-ui/react";
 import logo from "@/assets/logo.svg";
 import logoDark from "@/assets/logodark.svg";
 import Linkstack from "./linkstack";
-import { Link, useLocation } from "react-router-dom";
+import { Link as ReactRouterLink, useLocation } from "react-router-dom";
 import darkIcon from "@/assets/dark.svg";
 import lightIcon from "@/assets/light.svg";
 
@@ -40,8 +41,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
       <Container maxW='8xl' py={{ base: "18px", xl: "30px" }}>
         <HStack w='full' justify='space-between'>
           <HStack w={{ base: "initial", xl: "50%" }}>
-            {/* <Link onClick={handleHomeClick} to='/' _hover={{ textDecor: "none" }}> */}
-            <Link to='/'>
+            <ChakraLink as={ReactRouterLink} to='/' _hover={{ textDecor: "none" }}>
               <HStack>
                 <Image
                   src={colorMode === "light" ? logoDark : logo}
@@ -52,8 +52,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
                   Ahamefula Ayomide
                 </Text>
               </HStack>
-            </Link>
-            {/* </Link> */}
+            </ChakraLink>
           </HStack>
 
           <HStack
@@ -65,46 +64,50 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
             fontSize='16px'
             fontWeight='500'
           >
-            <Link
+            <ChakraLink
+              as={ReactRouterLink}
               id='navlink'
               to='/about'
               onClick={handleChange}
-              // borderRadius={router.pathname.includes("about") ? "3px" : ""}
-              // borderBottom={router.pathname.includes("about") ? "1.5px solid #5221e6" : ""}
+              borderRadius={router.pathname.includes("about") ? "3px" : ""}
+              borderBottom={router.pathname.includes("about") ? "1.5px solid #5221e6" : ""}
               // borderColor={router.pathname.includes("about") ? "" : ""}
             >
               About
-            </Link>
+            </ChakraLink>
 
-            <Link
+            <ChakraLink
+              as={ReactRouterLink}
               id='navlink'
               to='/process'
               onClick={handleChange}
-              // borderRadius={router.pathname.includes("process") ? "3px" : ""}
-              // borderBottom={router.pathname.includes("process") ? "1.5px solid #5221e6" : ""}
+              borderRadius={router.pathname.includes("process") ? "3px" : ""}
+              borderBottom={router.pathname.includes("process") ? "1.5px solid #5221e6" : ""}
             >
               Design Process
-            </Link>
+            </ChakraLink>
 
-            <Link
+            <ChakraLink
+              as={ReactRouterLink}
               id='navlink'
               to='/works'
               onClick={handleChange}
-              // borderRadius={router.pathname.includes("works") ? "3px" : ""}
-              // borderBottom={router.pathname.includes("works") ? "1.5px solid #5221e6" : ""}
+              borderRadius={router.pathname.includes("works") ? "3px" : ""}
+              borderBottom={router.pathname.includes("works") ? "1.5px solid #5221e6" : ""}
             >
               Works
-            </Link>
+            </ChakraLink>
 
-            <Link
+            <ChakraLink
+              as={ReactRouterLink}
               id='navlink'
               to='/contact'
               onClick={handleChange}
-              // borderRadius={router.pathname.includes("contact") ? "3px" : ""}
-              // borderBottom={router.pathname.includes("contact") ? "1.5px solid #5221e6" : ""}
+              borderRadius={router.pathname.includes("contact") ? "3px" : ""}
+              borderBottom={router.pathname.includes("contact") ? "1.5px solid #5221e6" : ""}
             >
               Contact
-            </Link>
+            </ChakraLink>
 
             <Box _hover={{ transform: "scale(0.94)", transition: "0.5s ease-in-out" }}>
               <Image
