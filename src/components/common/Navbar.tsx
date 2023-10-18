@@ -6,12 +6,12 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
-  Link,
+  // Link,
 } from "@chakra-ui/react";
 import logo from "@/assets/logo.svg";
 import logoDark from "@/assets/logodark.svg";
 import Linkstack from "./linkstack";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import darkIcon from "@/assets/dark.svg";
 import lightIcon from "@/assets/light.svg";
 
@@ -40,7 +40,8 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
       <Container maxW='8xl' py={{ base: "18px", xl: "30px" }}>
         <HStack w='full' justify='space-between'>
           <HStack w={{ base: "initial", xl: "50%" }}>
-            <Link onClick={handleHomeClick} href='/' _hover={{ textDecor: "none" }}>
+            {/* <Link onClick={handleHomeClick} to='/' _hover={{ textDecor: "none" }}> */}
+            <Link to='/'>
               <HStack>
                 <Image
                   src={colorMode === "light" ? logoDark : logo}
@@ -52,6 +53,7 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
                 </Text>
               </HStack>
             </Link>
+            {/* </Link> */}
           </HStack>
 
           <HStack
@@ -65,10 +67,10 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
           >
             <Link
               id='navlink'
-              href='/about'
+              to='/about'
               onClick={handleChange}
-              borderRadius={router.pathname.includes("about") ? "3px" : ""}
-              borderBottom={router.pathname.includes("about") ? "1.5px solid #5221e6" : ""}
+              // borderRadius={router.pathname.includes("about") ? "3px" : ""}
+              // borderBottom={router.pathname.includes("about") ? "1.5px solid #5221e6" : ""}
               // borderColor={router.pathname.includes("about") ? "" : ""}
             >
               About
@@ -76,30 +78,30 @@ const Navbar = ({ onLinkClick, onHomeClick }: { onLinkClick(): any; onHomeClick(
 
             <Link
               id='navlink'
-              href='/process'
+              to='/process'
               onClick={handleChange}
-              borderRadius={router.pathname.includes("process") ? "3px" : ""}
-              borderBottom={router.pathname.includes("process") ? "1.5px solid #5221e6" : ""}
+              // borderRadius={router.pathname.includes("process") ? "3px" : ""}
+              // borderBottom={router.pathname.includes("process") ? "1.5px solid #5221e6" : ""}
             >
               Design Process
             </Link>
 
             <Link
               id='navlink'
-              href='/works'
+              to='/works'
               onClick={handleChange}
-              borderRadius={router.pathname.includes("works") ? "3px" : ""}
-              borderBottom={router.pathname.includes("works") ? "1.5px solid #5221e6" : ""}
+              // borderRadius={router.pathname.includes("works") ? "3px" : ""}
+              // borderBottom={router.pathname.includes("works") ? "1.5px solid #5221e6" : ""}
             >
               Works
             </Link>
 
             <Link
               id='navlink'
-              href='/contact'
+              to='/contact'
               onClick={handleChange}
-              borderRadius={router.pathname.includes("contact") ? "3px" : ""}
-              borderBottom={router.pathname.includes("contact") ? "1.5px solid #5221e6" : ""}
+              // borderRadius={router.pathname.includes("contact") ? "3px" : ""}
+              // borderBottom={router.pathname.includes("contact") ? "1.5px solid #5221e6" : ""}
             >
               Contact
             </Link>
