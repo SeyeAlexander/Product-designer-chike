@@ -17,12 +17,14 @@ import { useLocation } from "react-router-dom";
 import call from "@/assets/call.svg";
 import mail from "@/assets/mail.svg";
 import { Field, Form, Formik } from "formik";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Reach = () => {
   const textColor = useColorModeValue("black", "white");
   const textColor2 = useColorModeValue("rgba(0, 0, 0, 0.75)", "rgba(255, 255, 255, 0.75)");
-  // "#8491A0"
   const bgColor = useColorModeValue("#FFF3E4", "linear-gradient(90deg, #181823 62%, #000000 38%)");
+
+  const [state, handleSubmit] = useForm("xgejrbgj");
 
   const initialValues = {
     name: "",
@@ -73,6 +75,7 @@ const Reach = () => {
               initialValues={initialValues}
               onSubmit={(values) => {
                 console.log(values);
+                if (values) handleSubmit(values);
               }}
             >
               {({ errors, values, handleSubmit }) => (
@@ -168,6 +171,7 @@ const Reach = () => {
                     >
                       <Box mt='-5px'>
                         <Button
+                          disabled={state.submitting}
                           fontSize='18px'
                           fontWeight='bold'
                           borderWidth='1px'
@@ -177,15 +181,17 @@ const Reach = () => {
                           borderRadius='3px'
                           borderColor='#5221E6'
                           color='white'
-                          // bg='none'
-                          bg='linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)'
+                          bg='none'
                           _active={{
                             bgColor: "#5221E6",
                             transform: "scale(0.98)",
                             transition: "0.3s ease all",
                           }}
-                          _hover={{ bgColor: "#5221E6" }}
-                          _focus={{ bgColor: "#5221E6" }}
+                          _hover={{
+                            bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)",
+                            transition: "0.5s ease all",
+                          }}
+                          _focus={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
                           onClick={() => handleSubmit()}
                         >
                           LET'S GET STARTED

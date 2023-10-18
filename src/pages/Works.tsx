@@ -33,7 +33,7 @@ const Works = () => {
               <Box className='overlay'></Box>
 
               <VStack
-                pt={{ base: "65px", xl: "190px" }}
+                pt={{ base: "65px", xl: "213px" }}
                 className='overlay2'
                 pl={{ base: "20px", xl: "40px" }}
                 align='flex-start'
@@ -75,7 +75,7 @@ const Works = () => {
               <Box className='overlay'></Box>
 
               <VStack
-                pt={{ base: "65px", xl: "190px" }}
+                pt={{ base: "65px", xl: "213px" }}
                 className='overlay2'
                 pl={{ base: "20px", xl: "40px" }}
                 align='flex-start'
@@ -117,7 +117,7 @@ const Works = () => {
               <Box className='overlay'></Box>
 
               <VStack
-                pt={{ base: "65px", xl: "190px" }}
+                pt={{ base: "65px", xl: "213px" }}
                 className='overlay2'
                 pl={{ base: "20px", xl: "40px" }}
                 align='flex-start'
@@ -159,7 +159,7 @@ const Works = () => {
               <Box className='overlay'></Box>
 
               <VStack
-                pt={{ base: "65px", xl: "190px" }}
+                pt={{ base: "65px", xl: "213px" }}
                 className='overlay2'
                 pl={{ base: "20px", xl: "40px" }}
                 align='flex-start'
@@ -201,7 +201,7 @@ const Works = () => {
               <Box className='overlay'></Box>
 
               <VStack
-                pt={{ base: "65px", xl: "190px" }}
+                pt={{ base: "65px", xl: "213px" }}
                 className='overlay2'
                 pl={{ base: "20px", xl: "40px" }}
                 align='flex-start'
@@ -243,7 +243,7 @@ const Works = () => {
               <Box className='overlay'></Box>
 
               <VStack
-                pt={{ base: "65px", xl: "190px" }}
+                pt={{ base: "65px", xl: "213px" }}
                 className='overlay2'
                 pl={{ base: "20px", xl: "40px" }}
                 align='flex-start'

@@ -269,14 +269,18 @@ const Jobs = ({ onLinkClick }: { onLinkClick(): any }) => {
                     borderRadius='5px'
                     borderColor='#5221E6'
                     color={textColor}
-                    // bg='none'
-                    bg='linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)'
+                    bg='none'
                     _active={{
-                      bgColor: "#5221E6",
+                      bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)",
                       transform: "scale(0.98)",
                       transition: "0.3s ease all",
                     }}
-                    _hover={{ bgColor: "#5221E6", color: "white" }}
+                    _hover={{
+                      bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)",
+                      color: "white",
+                      transition: "0.5s ease all",
+                    }}
+                    _focus={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
                   >
                     VIEW ALL PROJECTS
                   </Button>
