@@ -294,7 +294,7 @@ const Works = () => {
           borderBottomWidth='2px'
           borderRadius='8px'
           pl='5px'
-          borderColor='green'
+          borderColor='#BA42C0'
           _hover={{
             transform: "scale(1.02)",
             transition: "0.3s ease all",
@@ -308,15 +308,21 @@ const Works = () => {
           <Box mt='-5px'>
             <Link href='/contact'>
               <Button
-                bg='#9d9d9dc0'
+                bg='none'
                 w='250px'
-                color='black'
+                color='white'
                 height='59px'
                 borderRadius='5px'
-                _hover={{ bgColor: "#9d9d9dc0", opacity: "0.7", transition: "0.3s ease all" }}
-                _focus={{ bgColor: "#9d9d9dc0" }}
+                borderWidth='1px'
+                borderColor='#5221E6'
+                _hover={{
+                  bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)",
+                  opacity: "0.7",
+                  transition: "0.5s ease all",
+                }}
+                _focus={{ bg: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)" }}
                 _active={{
-                  bgColor: "#9d9d6d92",
+                  bgColor: "linear-gradient(180deg, #5221e6 0.06%, #ba42c0 99.94%)",
                   opacity: "0.7",
                   transform: "scale(0.98)",
                   transition: "0.3s ease all",
